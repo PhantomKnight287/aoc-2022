@@ -35,9 +35,8 @@ with open(f"{getcwd()}/input.txt", "r") as f:
                             stacks[f"{l[3]}"].pop(0), *stacks[f"{l[5]}"]]
 
                     else:
-                        for _ in range(0, int(l[1])):
-                            stacks[f"{l[5]}"] = [
-                                stacks[f"{l[3]}"].pop(0), *stacks[f"{l[5]}"]]
+                        for i in range(0, int(l[1])):
+                            stacks[f"{l[5]}"].insert(i,stacks[f"{l[3]}"].pop(0))
 
     required_sq = ""
     for k in stacks.keys():
